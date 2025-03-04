@@ -1,0 +1,30 @@
+```import Foundation
+
+// Defines a generic structure for a memory game where CardContent is a placeholder for the type of content the cards will hold.
+struct MemoryGame<CardContent> {
+    var cards: Array<Card>  // Array to hold all cards in the game.
+
+    // Initializes a new memory game with a specific number of card pairs and a factory method to create the content of each card.
+    init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
+        cards = Array<Card>()  // Initializes the cards array.
+        for pairIndex in 0..<numberOfPairsOfCards {  // Loop through the number of pairs required.
+            let content = cardContentFactory(pairIndex)  // Generate content for each pair.
+            cards.append(Card(content: content, id: pairIndex * 2))  // Add first card of the pair.
+            cards.append(Card(content: content, id: pairIndex * 2 + 1))  // Add second card of the pair.
+        }
+        cards = cards.shuffled()  // Shuffle the cards to randomize their order.
+    }
+    
+    // Method to handle what happens when a card is chosen.
+    func choose(card: Card) {
+        print("card chosen: \(card)")
+    }
+    
+    // Nested struct to define the properties of a card in the game.
+    struct Card: Identifiable {
+        var isFaceUp: Bool = true  // Indicates if the card is face up.
+        var isMatched: Bool = false  // Indicates if the card has been successfully matched.
+        var content: CardContent  // The content of the card, generic type.
+        var id: Int  // Unique identifier for each card.
+    }
+}```
