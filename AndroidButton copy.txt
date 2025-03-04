@@ -1,0 +1,21 @@
+import android.content.Intent; 
+import android.widget.Button;
+import java.lang.String;
+import android.app.Activity; 
+import android.view.View.OnClickListener;
+import android.view.View;
+import android.net.Uri; 
+
+ URL(string:"https://www.google.com")!)Button ButtonURL1 = (Button) findViewById(R.id.ButtonURL1);
+ButtonURL1.setText("Test google");
+ButtonURL1.setOnClickListener(new onClickListener() {
+	@Override
+	public void onClick(View view) {
+		String url = https://www.google.com;
+		Intent i = new Intent(Intent.ACTION_VIEW);
+		i.setData(Uri.parse(url));
+	startActivity(i);
+}
+});
+;
+

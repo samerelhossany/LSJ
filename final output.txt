@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+class MemoryGame<CardContent> {
+    ArrayList<Card> cards;
+
+    public MemoryGame(int numberOfPairsOfCards, CardContentFactory<CardContent> cardContentFactory) {
+        cards = new ArrayList<Card>();
+        for (int pairIndex = 0; pairIndex < numberOfPairsOfCards; pairIndex++) {
+            CardContent content = cardContentFactory.createCardContent(pairIndex);
+            cards.add(new Card(content, pairIndex * 2));
+            cards.add(new Card(content, pairIndex * 2 + 1));
+        }
+        Collections.shuffle(cards);
+    }
+
+    public void choose(Card card) {
+        System.out.println("card chosen: " + card);
+    }
+
+    class Card {
+        boolean isFaceUp = true;
+        boolean isMatched = false;
+        CardContent content;
+        int id;
+
+        public Card(CardContent content, int id) {
+            this.content = content;
+            this.id = id;
+        }
+    }
+    interface CardContentFactory<CardContent> {
+        CardContent createCardContent(int index);
+    }
+}

@@ -1,0 +1,16 @@
+import android.view.View.OnClickListener;
+import android.view.View;
+Switch switch1 = (Switch) findViewById(R.id.Switch1);
+switch1.setText("aaa");
+switch1.setOnClickListener(new View.OnClickListener(){
+	public void onClick(View view){
+		System.out.println( switch1 = (Switch) findViewById(R.id.Switch1);
+switch1.setText("aaa");
+switch1.setOnClickListener(new View.OnClickListener(){
+	public void onClick(View view){
+		null
+	}
+})
+	}
+});
+

@@ -1,0 +1,13 @@
+for (  person  : people){
+System.out.println( person.name());
+ if(person.age() >= 21) {
+System.out.println( "Can drink alcohol");
+
+}
+else{
+System.out.println( "Cannot drink alcohol");
+
+}
+
+}
+

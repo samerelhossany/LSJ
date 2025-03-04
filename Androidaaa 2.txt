@@ -1,0 +1,11 @@
+import android.view.View.OnClickListener;
+import android.view.View;
+Switch switch1 = (Switch) findViewById(R.id.Switch1);
+switch1.setText(Vibrate on Ring);
+switch1.setOnClickListener(new View.OnClickListener(){
+	public void onClick(View view){
+		null
+	}
+})
+;
+

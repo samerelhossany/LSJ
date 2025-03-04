@@ -1,0 +1,7 @@
+import java.lang.String;
+final String[] fruits  ={"apple","orange","shawerma"};
+for (String fruits = fruit){
+System.out.println( fruit;
+
+}
+

@@ -1,0 +1,34 @@
+import android.widget.Button;
+import java.lang.String;
+import android.widget.TextView;
+import android.widget.EditText;
+import android.view.View.OnClickListener;
+import android.view.View;
+
+String userName  = "";
+String password  = "";
+String header  = "Sign In Page";
+String indecate  = "Pending";
+
+TextView textView1 = (TextView) findViewById(R.id.textView1);
+textView1.setText( "Sign In Page");
+
+TextView textView2 = (TextView) findViewById(R.id.textView2);
+textView2.setText( "Pending");
+
+EditText simpleEditText1 = (EditText) findViewById(R.id.simpleEditText1);
+simpleEditText1.setText("Enter your name");
+
+EditText simpleEditText2 = (EditText) findViewById(R.id.simpleEditText2);
+simpleEditText2.setText("What is your age");
+
+Button button1 = (Button) findViewById(R.id.button1);
+button1.setText("Sign In Page");
+button1.setOnClickListener(new View.OnClickListener(){
+	public void onClick(View view){
+		indecate="done"
+	}
+});
+
+
+

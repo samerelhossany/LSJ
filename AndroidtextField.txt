@@ -1,0 +1,4 @@
+import android.view.View;
+EditTextsimpleEditText1 = (EditText) findViewById(R.id.simpleEditText1);
+simpleEditText1.setText(""User name (email address)"");
+

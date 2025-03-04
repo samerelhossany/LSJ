@@ -1,0 +1,61 @@
+import android.content.Intent; 
+import android.widget.Button;
+import java.lang.String;
+import android.widget.TextView;
+import android.widget.EditText;
+import android.app.AlertDialog;
+import android.app.Activity; 
+import android.view.View.OnClickListener;
+import android.view.View;
+import android.net.Uri; 
+String name  = "";
+String age  = "";
+String password  = "";
+String fullText  = "This is some editable text...";
+String new  = "BLABLABLA";
+
+EditText simpleEditText1 = (EditText) findViewById(R.id.simpleEditText1);
+simpleEditText1.setText("Enter your name");
+EditText simpleEditText2 = (EditText) findViewById(R.id.simpleEditText2);
+simpleEditText2.setText("What is your age");
+EditText simpleEditText_SecureField1 = (EditText) findViewById(R.id.simpleEditText1);
+simpleEditText_SecureField1.setText("What is your password");
+TextView textView1 = (TextView) findViewById(R.id.textView1);
+textView1.setText( "This is some editable text...");
+TextView textView2 = (TextView) findViewById(R.id.textView2);
+textView2.setText( "BLABLABLA");
+URLButton urlButton1 = (Button) findViewById(R.id.urlButton1);
+urlButton1.setText("");
+urlButton1.setOnClickListener(new onClickListener() {
+	@Override
+	public void onClick(View view) {
+		String url = "https://www.hackingwithswift.com/quick-start/swiftui";
+		Intent i = new Intent(Intent.ACTION_VIEW);
+		i.setData(Uri.parse(url));
+	startActivity(i);
+}
+});
+URLButton urlButton2 = (Button) findViewById(R.id.urlButton2);
+urlButton2.setText("google");
+urlButton2.setOnClickListener(new onClickListener() {
+	@Override
+	public void onClick(View view) {
+		String url = "https://www.google.com";
+		Intent i = new Intent(Intent.ACTION_VIEW);
+		i.setData(Uri.parse(url));
+	startActivity(i);
+}
+});
+ImageView foo0=(ImageView)findViewById(R.id.foo0);
+ImageView sky1=(ImageView)findViewById(R.id.sky1);
+AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+AlertDialog alert1 = builder1.create();
+alert1.setTitle("Alert Example");
+alert1.show();
+AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
+AlertDialog alert2 = builder2.create();
+alert2.setTitle("Alert 2");
+alert2.show();
+
+
+

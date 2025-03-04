@@ -1,0 +1,10 @@
+import android.widget.TextView;
+import android.widget.EditText;
+import android.view.View;
+
+ProgressBar progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);
+progressBar1.setMax(100);
+progressBar1.setProgress(50);
+TextView PBTextView1 = (TextView) findViewById(R.id.PBTextView1);
+PBTextView.setText("Downloading…");
+

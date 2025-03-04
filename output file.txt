@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.List;
+
+ class MemoryGame {
+ArrayList<null> cards ;
+public MemoryGame(int numberOfPairsOfCards, cardContentFactory)
+ {
+cards = Array<Card>;
+for (byte  pairIndex  : 0; pairIndex  < numberOfPairsOfCards;  pairIndex ++)){
+final byte content  = cardContentFactory pairIndex;
+cards.add Card content, pairIndex * 2;
+cards.add Card content, pairIndex * 2 + 1;
+
+}
+cards = cards.shuffled(;
+
+}
+public void choose(null card) 
+{
+System.out.println("card chosen: "+card);
+
+}
+ class Card extends Identifiable{
+boolean isFaceUp  = true;
+boolean isMatched  = false;
+null content ;
+int id ;
+
+}
+
+}
